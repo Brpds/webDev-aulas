@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+        
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+			$(function(e) {
+                //embrulhar os itens em uma div. wrapInner embrulha por dentro
+                //wrapAll embrulha externamente
+                $("ul li").wrapAll("<div style='border:1px solid #CCC'></div>");
+
+                //remover elemento da lista.
+				//$("li:first").remove();
+
+                //remove conteúdo com uma classe específica
+				//$("li.especifico").remove();
+
+                //substitui um item.
+                //$("li:last").replaceWith("<li> Curso Bootstrap</li>")
+			})
+		</script>        
+    </head>
+
+    <body>
+    	
+    
+		<ul>
+        		
+            <li class="especifico">Curso HTML5 Essencial</li>
+            <li class="especifico">Curso CSS3 Essencial</li>
+            <li>Curso Javascript Essencial</li>
+            <li>Curso jQuery Fundamental</li>
+        </ul>
+        
+        
+    </body>
+
+</html>

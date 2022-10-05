@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title>
+        <style>
+            #principal {position: absolute; height: 200px;
+            clip: rect(0 200px 200px 0);}
+			#janela { 
+                position: relative;
+                height:200px;
+                top:0; left: 0;
+            }
+            #janela img {float: left}
+		</style>
+        
+        <script src="jquery-3.2.1.min.js"></script>       
+        <script>
+
+            //cria a variável para definir o limite de width pela quantidade de fotos
+            var limite;
+
+            function moverFotos(){
+                //definindo a animação e a posição da janela
+                $('#janela').animate({left:"-=200"}, 1000, function(e){
+                    //reiniciar a posição do slide de fotos
+                    if($('#janela').position().left == limite) {
+                        $('#janela').css('left',0);
+                    }
+                });
+            };
+			$(function(e) {
+                //determina o tamanho do slide de fotos baseado na quantidade
+                //de imagens
+                limite = $('#janela img').length * $('#janela img').width() * -1;
+                
+                alert(limite);
+                //adiciona nova imagem na janela
+                $('#janela').append('<img>');
+                //posiciona a imagem como última e indica o path
+                $('#janela img:last').attr('src', 'imagens/foto1.jpg');
+                //chama a função moverFotos a cada intervalo de n milisegundos
+                setInterval(moverFotos, 2000);
+			});	
+		</script>        
+    </head>
+
+    <body>
+        <div id="principal">
+            <div id="janela">
+                <img src="imagens/foto1.jpg">
+                <img src="imagens/foto2.jpg">
+                <img src="imagens/foto3.jpg">
+                <img src="imagens/foto4.jpg">
+                <img src="imagens/foto5.jpg">
+             </div>
+        </div>
+
+    </body>
+
+</html>

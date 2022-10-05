@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso jQuery Fundamental</title> 
+    </head>
+
+    <body>
+    	<nav>
+        	<a href="#">Brasil</a>
+            <a href="#">Argentina</a>
+            <a href="#">Uruguai</a>
+            <a href="#">Chile</a>
+            <a href="#">Colômbia</a>
+        </nav>
+        <a href="#">Paraguai</a>
+		<!-- scripts -->
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>    
+        	$(function(){
+                //seleciona os elementos dentro do html para edição
+                //alteração utilizando o (" ") como direção
+                $("nav a:first").css("color", "red");
+                //:first - altera o primeiro
+                //:last - altera o último
+                //:nth(n) - altera o n fator
+                $("nav a").css("text-decoration","none").css("display","block");
+            });
+        </script>   
+                
+    </body>
+</html>

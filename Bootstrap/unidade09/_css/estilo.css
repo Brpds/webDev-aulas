@@ -1,0 +1,18 @@
+div.carousel-inner{
+    max-height: 550px;
+}
+
+@media (min-width:1170px){
+    div.carousel-inner{
+        max-height: 950px;
+    }
+    div.carousel-inner img{
+        width: 100%;
+    }
+}
+
+/* ajusta a imagem ao tamanho total da tela retirando a barra cinza
+lateral
+div.carousel-inner img{
+    width: 100%;
+}*/

@@ -1,0 +1,8 @@
+1 - Landing Page
+2 - Tabela da Copa
+3 - Página de Compras
+4 - Página de academia
+5 - jogo de loto
+6 - jogo de clique
+7 - loja de veículos
+8 - shift manager
